@@ -7,10 +7,9 @@ env:
 phases:
   build:
     commands:
-      - dotnet restore
+      - dotnet build
       - dotnet run
-      - Get-ChildItem -Path .-Recurse -ErrorAction SilentlyContinue -Force
-
-#artifacts:
-#  files:
-#    - .\FSharpHelloWorld\bin\Debug\*
+artifacts:
+  files:
+    - .\bin\Debug\*
+    
