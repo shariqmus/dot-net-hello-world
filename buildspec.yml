@@ -9,7 +9,8 @@ phases:
     commands:
       - dotnet restore
       - dotnet run
-      - find .
+      - Get-ChildItem -Path .-Recurse -ErrorAction SilentlyContinue -Force
+
 #artifacts:
 #  files:
 #    - .\FSharpHelloWorld\bin\Debug\*
